@@ -16,13 +16,12 @@ header {
 }
 
 nav {
-    margin: 5em 2em 2em 2em;
+    margin: 0 2em 2em 0;
     padding: 3em;
     color: #47566d;
     display:  flex;
     flex-flow: row wrap;
     align-content: space-around;
-    /*needs a media query for for tablet version*/
 }
 
 #flexLI {
@@ -32,33 +31,112 @@ nav {
     flex-direction: row;
     min-width: 20vw;
     padding-right: 1em;
-    padding-left: 1em;;
+    padding-left: 1em;
 }
 
 #flexLI li {
     list-style: none;
     text-align: right;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    border-bottom: 5px solid #47566d;
     font-size: 200%;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 #subtitlePhoto {
     margin-bottom: -.5em;
+    margin-top: -.5em;;
     width: 100vw;
     height: 100vh;
-    max-height: max-content;
+    max-height: 50%;
+    position: relative;
+    z-index:-10;
 }
 
 #subTitle {
-    color: #47566d;
-    position:bottom;
-    z-index:5;
+    color: rgb(37, 31, 31);
+    background-color: #d68f4c;
+    position: relative;
+    right: 0rem;
+    bottom: -49rem;
+    z-index: 5;
+    padding: 2em;
+    margin-top: 0;
 }
 
-#titleAboutMe {
+/*@media screen and (min-width: 576px) {
+    #subTitle {
+        bottom: -37rem;
+    }
+}
 
+@media screen and (min-width: 768px) {
+    #subTitle {
+        bottom: -3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #subTitle {
+        bottom: -9rem;
+    }
+}*/
+
+#titleWork {
+    margin-bottom: 1em;
+    border-bottom: 5px solid #47566d;
+}
+
+h3 {
+    color: #47566d;
+    font-size: 150%;
+    padding-bottom: 1em;
+    border-bottom: 5px solid #47566d;
 }
 
 #paragraphAboutMe {
-
+    color:  #47566d;
 }
 
+#work {
+    
+}
+
+h3 #titleWork {
+    margin-bottom: 1em;
+    border-bottom: 5px solid #47566d;
+}
+
+#workProjects {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+.project {
+    
+}
+
+footer {
+    color: #47566d;
+}
+
+footer h3 {
+    margin-bottom: .5em;
+    border-bottom: 5px solid #47566d;
+}
+
+#contactList {
+    list-style: none;
+    text-align: right;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#contactList li a {
+    margin: auto 2em;
+    width: 50%;
+}
