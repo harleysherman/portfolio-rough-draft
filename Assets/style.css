@@ -91,7 +91,7 @@ and in an orange box */
     background-color: var(--secondary-color);
     position: relative;
     right: 0rem;
-    bottom: -49rem;
+    bottom: -100rem;
     z-index: 5;
     padding: 2em;
     margin-top: 1em;
@@ -251,7 +251,7 @@ footer h3 {
         display: flex;
     }
     #aboutTitle {
-        flex-basis: 20%;
+        flex-basis: 18.3%;
         /* border-bottom: 5px solid #47566d; */
     }
     #paragraphAboutMe {
@@ -264,7 +264,6 @@ footer h3 {
     #titleWork {
         flex-basis: 17.5%;
     }
-    
     #workProjects {
         flex-basis: 80%;
     }
