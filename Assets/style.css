@@ -1,5 +1,8 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --primary-color: #47566d;
+    --secondary-color: #d68f4c;
+    --teritary-color: #e38dbe;
 }
 
 /* Header flex parent element */
@@ -8,7 +11,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom:1em;
-    color: #47566d;
+    color: var(--primary-color);
 }
 
 /* logo identity to align upper left side of the page */
@@ -21,7 +24,7 @@ header {
 nav {
     margin: 0 2em 2em 0;
     padding: 3em;
-    color: #47566d;
+    color: var(--primary-color);
     display:  flex;
     flex-flow: row wrap;
     align-content: space-around;
@@ -52,21 +55,21 @@ nav {
 
 /* creates a border on the bottom with no text sytling from a */
 nav ul li a {
-    border-bottom: 5px solid #47566d;
+    border-bottom: 5px solid var(--primary-color);
     text-decoration: none;
 }
 
 /* when the user hovers over the work project, the background will be 
 light blue */
 nav ul li a:hover {
-    color: #d68f4c;
-    border-bottom: 5px solid #d68f4c;
+    color: var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 /* when the li is clicked by the user, the color changes to pink */
 nav ul li a:active {
-    color: #e38dbe;
-    border-bottom: 5px solid #e38dbe;
+    color: (var(--teritary-color));
+    border-bottom: 5px solid (var(--teritary-color))dbe;
 }
 
 /* photo attributes */
@@ -85,7 +88,7 @@ nav ul li a:active {
 and in an orange box */
 #subTitle {
     color: rgb(37, 31, 31);
-    background-color: #d68f4c;
+    background-color: var(--secondary-color);
     position: relative;
     right: 0rem;
     bottom: -49rem;
@@ -116,40 +119,48 @@ and in an orange box */
 /* align work title with a bottom margin and a blue line */
 #workTitle {
     margin-bottom: 1em;
-    border-bottom: 5px solid #47566d;
 }
 
 /* header element that aligns all page headers with margin and bottom border */
 h3 {
-    color: #47566d;
+    color: var(--primary-color);
     font-size: 150%;
     padding-bottom: 1em;
-    border-bottom: 5px solid #47566d;
+    border-bottom: 5px solid var(--primary-color);
     margin: 2em 2em 0 2em;
 }
 
 /* about paragraph font is blue and has a margin around */
 #paragraphAboutMe {
-    color:  #47566d;
-    margin: 2em 3em 0 3em;
+    color:  var(--primary-color);
+    margin: 3em 3em 2em 3em;
 }
 
-/* work identity not yet needed
+/* work identity not yet needed */
 #work {
-    
-} */
+    display: flex;
+    flex-direction: column;
+}
 
 /* h3 work title with border bottom line */
 h3 #titleWork {
     margin-bottom: 1em;
-    border-bottom: 5px solid #47566d;
 }
 
 /* mainHighlightProj identity that makes sure the first 
 project width is alway 100% */
  #mainHighlightProj {
-    flex-basis: 100%;
+    flex-basis: 94%;
  }
+
+ p {
+    flex-shrink: 1;
+ }
+/* removes a href styles from h3 p title in work section */
+p a {
+    text-decoration: none;
+
+}
 
  /* workProjects identity is a flex parent with items that follow in one row */
 #workProjects {
@@ -160,22 +171,21 @@ project width is alway 100% */
 
 /* for all the titles of workProjects, the background is orange and text is white */
 #workProjects p {
-    background-color: #d68f4c;
+    background-color: var(--secondary-color);
     color: white;
     position: absolute;
     right: -0.14rem;
     bottom: 2rem;
     z-index: 5;
     padding: 1em;
-    margin-right: 2em;
 } 
 
 /* imageContainer class that positions each conatiner for each project */
 .imageContainer {
     position: relative;
-    /* margin: 2em 1em 0 3em; NEED TO FIG OUT MARGIN ALGIN*/
+    margin: 1em; 
     padding: 2em 3em 0em 2.5em;
-    border: 5px solid #d68f4c;
+    border: 5px solid var(--secondary-color);
 }
 
 /* imageContainer class that directly affects first p element with padding */
@@ -199,40 +209,81 @@ to a light blue */
     }
 } */
 
-/* media screen queries for responsive design */
-@media screen and (min-width: 768px) {
-    .imageContainer {
-        flex-basis: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .imageContainer {
-        flex-basis: 50%;
-    }
-}
-
 /* change the footer font to blue */
 footer {
-    color: #47566d;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
 }
 
 /* make footer h3 with a bottom line in blue and a margin */
 footer h3 {
     margin-bottom: .5em;
-    border-bottom: 5px solid #47566d;
+    flex-basis: 20%;
 }
 
 /* contactList identity removes li styling and make flex parent */
 #contactList {
     list-style: none;
-    text-align: right;
+    text-align: center;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    flex-basis: 80%;
 }
 
 /* stylize a elements with margin and width at 50% */
 #contactList li a {
-    margin: auto 2em;
+    margin: 1em;
     width: 50%;
+}
+
+/* media screen queries for responsive design - desktop version*/
+@media screen and (min-width: 768px) {
+    .imageContainer {
+        flex-basis: 90%;
+    }
+    h3 {
+        border-right: 5px solid var(--primary-color);
+        border-bottom-style: none;
+        padding-right: -2em;
+    }
+    #about {
+        display: flex;
+    }
+    #aboutTitle {
+        flex-basis: 20%;
+        /* border-bottom: 5px solid #47566d; */
+    }
+    #paragraphAboutMe {
+        flex-basis: 80%;
+        /* border-bottom: 5px solid #47566d; */
+    }
+    #work {
+        flex-direction: row;
+    }
+    #titleWork {
+        flex-basis: 17.5%;
+    }
+    
+    #workProjects {
+        flex-basis: 80%;
+    }
+    footer {
+        flex-direction: row;
+    }
+    #contactMeTitle {
+        padding-right: 0.5em;
+        flex-basis: 16.5%;
+    }
+    #contactList {
+        justify-content: space-evenly;
+        margin-left: -3em;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .imageContainer {
+        flex-basis: 45%;
+    }
 }
