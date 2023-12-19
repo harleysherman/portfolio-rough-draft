@@ -1,4 +1,4 @@
-# portfolio-rough-draftf
+# portfolio-rough-draft
 
 ## Description
 
@@ -39,7 +39,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-I want to thank Charles for helping start this project. I want to thank Daniel for helping me understand flexbox and z-index. I want to thank Leif for helping me work the project subtitles better.
+I want to thank Charles for helping start this project and fix work and contact page layout and responsiveness. I want to thank Daniel for helping me understand flexbox and z-index. I want to thank Leif for helping me work the project subtitles better.
+
+I also want to thank Miah and Thomas for helping me in the study group by working together and guideing me on the ways of the flexbox.
 
 ## License
 
