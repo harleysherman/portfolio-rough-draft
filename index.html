@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,33 @@
     <link rel="stylesheet" href="./Assets/reset.css">
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
+    <!--Logo and nav, nav is linked to pages-->
     <header>
         <img id="logo" src="./Assets/Sherman-Logo-Alone.jpg" alt="Harley Personal Logo">
         <nav>
             <ul id="flexLI">
-                <li><a ref="#paragraphAboutMe">About Me</a></li>
-                <li><a ref="#workProjects">Work</a></li>
-                <li><a ref="#contactMe">Contact Me</a></li>
-                <li><a re="#resume">Resume</a></li>
+                <li><a href="#aboutTitle">About Me</a></li>
+                <li><a href="#workTitle">Work</a></li>
+                <li><a href="#contactMeTitle">Contact Me</a></li>
+                <li><a href="#resumeTitle">Resume</a></li>
             </ul>
         </nav>
     </header>
+    <!--About section includes author photo, about title, and paragraph-->
     <article id="about">
         <h2 id="subTitle">
             Design and Developement
         </h2>
         <img id="subtitlePhoto" src="./Assets/SelfPortrait-2.jpg" alt="Author Photo">
-        <h3>
+        <h3 id="aboutTitle">
             About Me
         </h3>
         <p id="paragraphAboutMe">
             Front-end web developer with a background in Graphic Design to create more
             user friendly websites. Recently earned a certificate in full stack
-            development from SMU and developed skills in CSS, JavaScript, React.js, 
+            development from SMU and developed skills in CSS, JavaScript, React.js,
             and responsive web design. Known as a tenacious and problem solver
             developer, with a primary interest in mobile first design and development.
             Aim for every website created to engage the user in accessible and memorable
@@ -38,19 +42,49 @@
             for websites.
         </p>
     </article>
+    <!--Work section includes title, images of every project, and subtitle for each project-->
     <article id="work">
         <h3 id="titleWork">
             Work
         </h3>
         <section id="workProjects">
-            <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Horiseon Accessiblity Refactor">
-            <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Luna Compact Chair Webpage">
-            <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Genie Device Registration">
-            <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Coping Journal">
-            <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="El Yunque Website">
+            <figure class="imageContainer" id="mainHighlightProj">
+                <p>
+                    Horiseon Accessiblity Refactor
+                </p>
+                <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Horiseon Accessiblity Refactor">
+            </figure>
+
+            <figure class="imageContainer">
+                <p>
+                    Luna Compact Chair Site
+                </p>
+                <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Luna Compact Chair Webpage">
+            </figure>
+
+            <figure class="imageContainer">
+                <p>
+                    Genie Devie Registration Application
+                </p>
+                <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Genie Device Registration">
+            </figure>
+            <figure class="imageContainer">
+                <p>
+                    Coping Journal
+                </p>
+                <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="Coping Journal">
+            </figure>
+            <figure class="imageContainer">
+                <p>
+                    El Yunque Website
+                </p>
+                <img class="project" src="./Assets/Sherman-Logo-Alone.jpg" alt="El Yunque Website">
+
+            </figure>
+
         </section>
     </article>
-    <!--<article id="resume">
+    <!--<article id="resumeTitle">
         <h4>
             Resume
         </h4>
@@ -101,8 +135,9 @@
         </section>
     </article>-->
 </body>
+<!--Footer contains Contact info: phone number, portfolio site, linkedIn, and github-->
 <footer>
-    <h3>
+    <h3 id="contactMeTitle">
         Contact Me
     </h3>
     <ul id="contactList">
@@ -112,4 +147,5 @@
         <li><a href="https://github.com/harleysherman">GitHub</a></li>
     </ul>
 </footer>
+
 </html>

@@ -2,6 +2,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Header flex parent element */
 header {
     display:flex;
     flex-wrap: wrap;
@@ -10,11 +11,13 @@ header {
     color: #47566d;
 }
 
+/* logo identity to align upper left side of the page */
 #logo {
     justify-self: start;
     padding:1em;
 }
 
+/* nav elem, a flex parent, that aligns each li in the upper right and spaces them equally */
 nav {
     margin: 0 2em 2em 0;
     padding: 3em;
@@ -24,6 +27,7 @@ nav {
     align-content: space-around;
 }
 
+/* flexLI  is flex parent that aligns the li in one row*/
 #flexLI {
     display: flex;
     flex-wrap: wrap;
@@ -34,18 +38,38 @@ nav {
     padding-left: 1em;
 }
 
+/* flexLI li takes the li styles away and aligns text to the right */
 #flexLI li {
     list-style: none;
     text-align: right;
     padding-right: 1em;
     padding-bottom: .5em;
     padding-top: .5em;
-    border-bottom: 5px solid #47566d;
     font-size: 200%;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
+/* creates a border on the bottom with no text sytling from a */
+nav ul li a {
+    border-bottom: 5px solid #47566d;
+    text-decoration: none;
+}
+
+/* when the user hovers over the work project, the background will be 
+light blue */
+nav ul li a:hover {
+    color: #d68f4c;
+    border-bottom: 5px solid #d68f4c;
+}
+
+/* when the li is clicked by the user, the color changes to pink */
+nav ul li a:active {
+    color: #e38dbe;
+    border-bottom: 5px solid #e38dbe;
+}
+
+/* photo attributes */
 #subtitlePhoto {
     margin-bottom: -.5em;
     margin-top: -.5em;;
@@ -54,8 +78,11 @@ nav {
     max-height: 50%;
     position: relative;
     z-index:-10;
+    object-fit: cover;
 }
 
+/* subTitle identity that algins the subTitle to the bottom right 
+and in an orange box */
 #subTitle {
     color: rgb(37, 31, 31);
     background-color: #d68f4c;
@@ -64,10 +91,11 @@ nav {
     bottom: -49rem;
     z-index: 5;
     padding: 2em;
-    margin-top: 0;
+    margin-top: 1em;
 }
 
-/*@media screen and (min-width: 576px) {
+/* Not needed code - but fun little nuggets
+@media screen and (min-width: 576px) {
     #subTitle {
         bottom: -37rem;
     }
@@ -85,50 +113,117 @@ nav {
     }
 }*/
 
-#titleWork {
+/* align work title with a bottom margin and a blue line */
+#workTitle {
     margin-bottom: 1em;
     border-bottom: 5px solid #47566d;
 }
 
+/* header element that aligns all page headers with margin and bottom border */
 h3 {
     color: #47566d;
     font-size: 150%;
     padding-bottom: 1em;
     border-bottom: 5px solid #47566d;
+    margin: 2em 2em 0 2em;
 }
 
+/* about paragraph font is blue and has a margin around */
 #paragraphAboutMe {
     color:  #47566d;
+    margin: 2em 3em 0 3em;
 }
 
+/* work identity not yet needed
 #work {
     
-}
+} */
 
+/* h3 work title with border bottom line */
 h3 #titleWork {
     margin-bottom: 1em;
     border-bottom: 5px solid #47566d;
 }
 
+/* mainHighlightProj identity that makes sure the first 
+project width is alway 100% */
+ #mainHighlightProj {
+    flex-basis: 100%;
+ }
+
+ /* workProjects identity is a flex parent with items that follow in one row */
 #workProjects {
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
 }
 
-.project {
-    
+/* for all the titles of workProjects, the background is orange and text is white */
+#workProjects p {
+    background-color: #d68f4c;
+    color: white;
+    position: absolute;
+    right: -0.14rem;
+    bottom: 2rem;
+    z-index: 5;
+    padding: 1em;
+    margin-right: 2em;
+} 
+
+/* imageContainer class that positions each conatiner for each project */
+.imageContainer {
+    position: relative;
+    /* margin: 2em 1em 0 3em; NEED TO FIG OUT MARGIN ALGIN*/
+    padding: 2em 3em 0em 2.5em;
+    border: 5px solid #d68f4c;
 }
 
+/* imageContainer class that directly affects first p element with padding */
+.imageContainer + p {
+    padding: 2em 3em 0em 2.5em;
+    /* width: 100vw; */
+    /* flex-basis: 50%; */
+}
+
+/* when the user hovers over imageContainer the background color with change 
+to a light blue */
+.imageContainer:hover {
+    z-index: 3;
+    background-color: rgba(71, 85, 114, 0.6);
+}
+
+/* code not needed - just fun little nuggets 
+@media screen and (min-width: 576px) {
+    .imageContainer {
+        flex-basis: 100%;
+    }
+} */
+
+/* media screen queries for responsive design */
+@media screen and (min-width: 768px) {
+    .imageContainer {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .imageContainer {
+        flex-basis: 50%;
+    }
+}
+
+/* change the footer font to blue */
 footer {
     color: #47566d;
 }
 
+/* make footer h3 with a bottom line in blue and a margin */
 footer h3 {
     margin-bottom: .5em;
     border-bottom: 5px solid #47566d;
 }
 
+/* contactList identity removes li styling and make flex parent */
 #contactList {
     list-style: none;
     text-align: right;
@@ -136,6 +231,7 @@ footer h3 {
     flex-flow: row wrap;
 }
 
+/* stylize a elements with margin and width at 50% */
 #contactList li a {
     margin: auto 2em;
     width: 50%;
