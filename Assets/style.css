@@ -91,7 +91,7 @@ and in an orange box */
     background-color: var(--secondary-color);
     position: relative;
     right: 0rem;
-    bottom: -100rem;
+    bottom: -30em;
     z-index: 5;
     padding: 2em;
     margin-top: 1em;
@@ -150,7 +150,7 @@ h3 #titleWork {
 /* mainHighlightProj identity that makes sure the first 
 project width is alway 100% */
  #mainHighlightProj {
-    flex-basis: 94%;
+    flex-basis: 92.5%;
  }
 
  p {
